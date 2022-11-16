@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clock</title>
+<style>
+body {
+  margin: 0;
+}
+div {
+  margin: auto;
+  font-size: 4rem;
+  font-family: consolas;
+}
+#background1 {
+  background: grey;
+  color: grey;
+  width: 50px;
+  height: 10px;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 1%;
+  left: 45%;
+  font-size: 0px;
+}
+
+#background2 {
+  background: grey;
+  color: grey;
+  width: 50px;
+  height: 10px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  font-size: 0px;
+}
+
+#background3 {
+  background: grey;
+  color: grey;
+  width: 50px;
+  height: 10px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 1%;
+  left: 55%;
+  font-size: 0px;
+}
+.days {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+}
+#clock {
+  text-align: center;
+  color: white;
+}
+#background1img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#background2:hover {
+  opacity: 0.27;
+  transition: opacity 0.3s;
+}
+#background3:hover {
+  opacity: 0.27;
+  transition: opacity 0.3s;
+}
+</style>
+</head>
+<body>
+<img id="background1img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPpKpXByJMC6UbS2RuRFLKvqia8DJsh-3Y56Q_gNbCeLbDMA7i-8PZHCb5nEmityxO58:https://static.vecteezy.com/system/resources/thumbnails/007/233/624/small/brick-black-wall-texture-background-dark-brickwork-pattern-block-stone-structure-backdrop-dark-brick-wall-realistic-template-abstract-modern-wallpaper-design-illustration-vector.jpg&usqp=CAU">
+<br><br><br><br>
+<main>
+  <div class="days">
+    <p>
+      <span id="dy"></span>
+      <span id="mt"></span>
+      <span id="dt"></span>
+      <span id="yr"></span>
+    </p>
+  </div>
+<div>
+  <p id="clock"></p>
+</div>
+  <div id="backgroundselect">
+    <span id="background1">|</span>
+    <span onclick="window.location = 'xabliv.github.io/clock/b2'" id="background2">|</span>
+    <span onclick="window.location = 'xabliv.github.io/clock/b3'" id="background3">|</span>
+</div>
+</main>
+</body>
+<script>
+const clock12 = document.getElementById('clock')
+
+function concatZero(timeFrame) {
+  return timeFrame < 10 ? '0'.concat(timeFrame) : timeFrame
+}
+
+function realTime() {
+  let date = new Date()
+  let sec = date.getSeconds()
+  let mon = date.getMinutes()
+  let hr = date.getHours()
+  // If the hour equals 0 or 12, the remainder equals 0, so output 12 instead. (0 || 12 = 12)
+  clock.textContent = `${concatZero((hr % 12) || 12)} : ${concatZero(mon)} : ${concatZero(sec)} ${hr >= 12 ? 'PM' : 'AM'}`
+}
+
+setInterval(realTime, 1000)
+</script>
+<script>
+let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  // Day
+  let d = new Date();
+  let dayName = days[d.getDay()];
+  dy.innerText = dayName + ",";
+
+  // Month
+  let month = d.toLocaleString("default", { month: "long" });
+  mt.innerText = month;
+
+  // Date
+  let date = d.getDate();
+  dt.innerText = date + ",";
+
+  // Year
+  let year = d.getFullYear();
+  yr.innerText = year;
+
+  setInterval(() => {
+    update_fun();
+  }, 1000);
+  
+update_fun()
+</script>
+</html>
