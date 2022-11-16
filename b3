@@ -87,8 +87,8 @@ div {
   <p id="clock"></p>
 </div>
   <div id="backgroundselect">
-    <span onclick="window.location = 'xabliv.github.io/clock/index.html'" id="background1">|</span>
-    <span onclick="window.location = 'xabliv.github.io/clock/b2'" id="background2">|</span>
+    <span id="background1"><a href="./b1">|</a></span>
+    <span id="background2"><a href="./b1">|</a></span>
     <span id="background3">|</span>
 </div>
 </main>
