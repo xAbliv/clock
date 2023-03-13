@@ -2,7 +2,7 @@
 <html>
 <head>
   <link rel="icon" type="image/x-icon" href="https://www.bing.com/th?id=OIP.hxKvLhlE9nDMOHY1gKGjzwHaHa&w=170&h=169&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
-<title>Clock</title>
+<title>Time</title>
 <style>
 body {
   margin: 0;
@@ -56,7 +56,7 @@ div {
   text-align: center;
   color: white;
 }
-#background3img {
+#background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -73,8 +73,24 @@ div {
 </style>
 </head>
 <body>
-<img id="background3img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzZOQeAFu_ghcpm2x6SES_k_x27SbX9JxbCrmmJ6CGVSmxPAQY84K-8K1v4b64KHUd8iM:https://img.freepik.com/premium-vector/abstract-background-connecting-innovation-hexagonal-communication-concept-innovation-background-vector-illustration_42421-1422.jpg&usqp=CAU">
+<div id="background"></div>
 <br><br><br><br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xf61fa,
+  backgroundColor: 0x60607
+})
+</script>
 <main>
   <div class="days">
     <p>
