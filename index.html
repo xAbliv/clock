@@ -70,6 +70,12 @@ div {
   opacity: 0.27;
   transition: opacity 0.3s;
 }
+  main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 </head>
 <body>
@@ -101,12 +107,12 @@ VANTA.HALO({
 <div>
   <p id="clock"></p>
 </div>
+  </main>
   <div id="backgroundselect">
     <span id="background1">|</span>
     <a href="./b2.html"><span id="background2">|</span></a>
     <a href="./b3.html"><span id="background3">|</span></a>
 </div>
-</main>
 </body>
 <script>
 const clock12 = document.getElementById('clock')
