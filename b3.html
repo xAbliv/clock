@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,6 +71,12 @@ div {
   opacity: 0.27;
   transition: opacity 0.3s;
 }
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 </head>
 <body>
@@ -93,22 +100,20 @@ VANTA.NET({
 </script>
 <main>
   <div class="days">
-    <p>
       <span id="dy"></span>
       <span id="mt"></span>
       <span id="dt"></span>
       <span id="yr"></span>
-    </p>
   </div>
 <div>
   <p id="clock"></p>
 </div>
+</main>
   <div id="backgroundselect">
     <a href="./index.html"><span id="background1">|</span></a>
     <a href="./b2.html"><span id="background2">|</span></a>
     <span id="background3">|</span>
 </div>
-</main>
 </body>
 <script>
 const clock12 = document.getElementById('clock')
