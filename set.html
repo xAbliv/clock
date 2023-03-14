@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="https://www.bing.com/th?id=OIP.hxKvLhlE9nDMOHY1gKGjzwHaHa&w=170&h=169&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2">
+<title>Clock</title>
+<style>
+body {
+  margin: 0;
+}
+div {
+  margin: auto;
+  font-size: 4rem;
+  font-family: consolas;
+}
+#background1 {
+  background: grey;
+  color: grey;
+  width: 50px;
+  height: 10px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 1%;
+  left: 45%;
+  font-size: 0px;
+}
+
+#background2 {
+  background: grey;
+  color: grey;
+  width: 50px;
+  height: 10px;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  font-size: 0px;
+}
+
+#background3 {
+  background: grey;
+  color: grey;
+  width: 50px;
+  height: 10px;
+  opacity: 0.2;
+  position: absolute;
+  bottom: 1%;
+  left: 55%;
+  font-size: 0px;
+}
+.days {
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+}
+#clock {
+  text-align: center;
+  color: white;
+}
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#background1:hover {
+  opacity: 0.27;
+  transition: opacity 0.3s;
+}
+#background3:hover {
+  opacity: 0.27;
+  transition: opacity 0.3s;
+}
+  main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<div id="background"></div>
+<br><br><br><br>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+<script>
+VANTA.WAVES({
+  el: "#background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x1b1b1e
+})
+</script>
+<main>
+  <div class="days">
+    <p>
+      <span id="dy">Sunday,</span>
+      <span id="mt">January</span>
+      <span id="dt">1,</span>
+      <span id="yr">2023</span>
+    </p>
+  </div>
+<div>
+  <p id="clock">12:00:00 AM</p>
+</div>
+  </main>
+  <div id="backgroundselect">
+    <a href="./index.html"><span id="background1">|</span></a>
+    <span id="background2">|</span>
+    <a href="./b3.html"><span id="background3">|</span></a>
+</div>
+</body>
+
+</html>
